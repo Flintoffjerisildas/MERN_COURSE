@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+
+        body{
+            margin: 0%;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0% 5%;
+            background-color: rgb(22, 20, 44);
+            color: aliceblue;
+        }
+        .links{
+            display: flex;
+            justify-content: space-around;
+            gap: 50px;
+            align-items: center;      
+            a{
+                text-decoration: none;
+                color: rgb(158, 171, 182);
+            }
+        }
+        .container1{
+            height: 100ex;
+            background-color:  rgb(22, 20, 44);
+            .hero{
+                display: flex;
+                justify-content: space-between;
+                padding: 5% 5%;
+                color: aliceblue;
+
+                button{
+                    background-color: rgb(24, 119, 156);
+                    padding: 1% 2%;
+                    border-width: 2px;
+                    border-radius: 5px;
+                    border-style: hidden;
+                    border-color: rgb(24, 119, 156);
+                }
+                .image{
+                    background-color: gray;
+                    width: 100ex;
+                    text-align: center;
+                    align-content: center;
+                }
+            }
+        }
+        .container2{
+            text-align: center;
+            
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                height: 60vh;
+                justify-content: center;
+                gap: 20px;
+                padding: 5% 10%;
+                .card{
+                    
+                    height: 100px;
+                    width: 110px;
+                    .boxs{
+                        height: 100%;
+                        
+                        border-width: 4px;
+                        border: solid rgb(0, 119, 255);
+                        border-radius: 10%;
+                        
+                    }
+                }
+            }
+        }
+        .container3{
+            height: 40vh;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .texxt{
+                width: 40%;
+                h3{
+                    text-align: center;
+                    font-weight: 100;
+                    font-style: italic;
+                }
+                h2{
+                    text-align: end;
+                    font-weight: 200;
+                    font-style: italic;
+                }
+            }
+        }
+        .container4{
+            height: 40vh;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            .call{
+                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgb(0, 119, 255);
+                padding: 2%;
+                border-radius: 20px;
+                .words{
+                    width: 50ex;
+                    text-align: left;
+                }
+                button{
+                    width: 150px;
+                    height: 40px;
+                    color: aliceblue;
+                    background-color: rgb(0, 119, 255);
+                    border: solid white;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .container5{
+            background-color: black;
+            color: white;
+            padding: 0.1%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container1">
+        <div class="nav">
+            <h2>Header Logo</h2>
+            <div class="links">
+                <a href="">header link one</a>
+                <a href="">header link two</a>
+                <a href="">header link three</a>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="tittles">
+                <h1>This Website is <br>awsome</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, amet sequi tempora,Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam voluptatem est eius quibusdam, voluptas velit quaerat! alias!</p>
+                <button>Sign up</button>
+            </div>
+            <div class="image">
+                <img src="" alt="This placeholder has a image">
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <h2>Some Random Information</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="boxs"></div>
+                <p>This is some subtext under an image</p>
+            </div>
+            <div class="card">
+                <div class="boxs"></div>
+                <p>This is some subtext under an image</p>
+            </div>
+            <div class="card">
+                <div class="boxs"></div>
+                <p>This is some subtext under an image</p>
+            </div>
+            <div class="card">
+                <div class="boxs"></div>
+                <p>This is some subtext under an image</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container3">
+        <div class="texxt">
+            <h3>You said you don't care where. Well, what you see is what you get. This is your paradise. There's no paradise... For you to escape to.</h3>
+            <h2>-Guts</h2>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="call">
+            <div class="words">
+                <h3>Call to action! it's time!</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum est corrupti velit. Ut magni incidunt iure perspiciatis adip</p>
+            </div>
+            <button>Sign up</button>
+        </div>
+    </div>
+    <div class="container5">
+        <h2>&copy All rights reserved - Batman</h2>
+    </div>
+</body>
+</html>
