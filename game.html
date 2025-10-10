@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            text-align: center;
+            margin-top: 50px;
+            background: linear-gradient(to right, #747aeb, #ACB6E5);
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            justify-items: center;
+            align-items: center;
+        }
+        button {
+            padding: 30px 30px;
+            border-radius: 50%;
+            margin: 5px;
+            font-size:xx-large;
+            cursor: pointer;
+            background-color: rgb(33, 83, 83);
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        #result, #score {
+            margin-top: 20px;
+        }
+        .scores {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+            #playerScore, #computerScore {
+                margin: 0 20px;
+                font-size: 20px;
+                border:solid black 2px;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            #playerScore {
+                background-color: rgb(20, 120, 153);
+            }
+            #computerScore {
+                background-color: rgb(173, 34, 34);
+            }
+        }
+    </style>
+</head>
+<body>
+    <H1>Welcome to the Game</H1>
+    <h2>Stone || Paper || Scissors</h2>
+    <div class="scores">
+        <h4 id="playerScore">Player: 0</h4>
+        <h4 id="computerScore">Computer: 0</h4>
+    </div>
+    <div class="container">
+        <button id="stone">🪨</button>
+        <button id="paper">📄</button>
+        <button id="scissors">✂️</button> 
+        <script>
+            let playerScore = 0;
+            let computerScore = 0;
+
+            document.getElementById('stone').onclick = function() { playGame('stone'); };
+            document.getElementById('paper').onclick = function() { playGame('paper'); };
+            document.getElementById('scissors').onclick = function() { playGame('scissors'); };
+
+            function playGame(player) {
+                const choices = ['stone', 'paper', 'scissors'];
+                const computer = choices[Math.floor(Math.random() * 3)];
+                let result = '';
+
+                if (player === computer) {
+                    result = "It's a tie!";
+                } else if (
+                    (player === 'stone' && computer === 'scissors') || (player === 'paper' && computer === 'stone') || (player === 'scissors' && computer === 'paper')
+                ) {
+                    result = 'You win!';
+                    playerScore++;
+                } else {
+                    result = 'Computer wins!';
+                    computerScore++;
+                }
+                document.getElementById('result').innerText = "You chose " + player + ", Computer chose " + computer + ".\n" + result;
+                document.getElementById('playerScore').innerText = `Player: ${playerScore}`;
+                document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
+            }
+        </script>
+    </div>
+    <h3 id="result"></h3>
+</body>
+</html>
