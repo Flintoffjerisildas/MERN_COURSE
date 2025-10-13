@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Example</title>
+</head>
+<body>
+  <textarea id="i" rows="10" cols="40"></textarea>
+
+  <script>
+    const element = document.getElementById("i");
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => {
+        console.log("API Response:", json);
+        element.value = JSON.stringify(json, null, 2);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
+      fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(res => res.json())
+        .then(data => {
+            element.value = JSON.stringify(data, null, 2);
+            data.forEach(item => console.log(item.title)); // print each title
+        })
+        .catch(err => console.error(err));
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const variable = new Promise((res, rej) => {
+        
+        setTimeout(() => {
+            const condition = true;
+            if (condition) {
+                res('Promise resolved successfully!');
+            } else {
+                rej('Promise rejected!');
+            }
+        }, 2000);
+        
+    })
+    console.log("Before promise");
+
+    variable.then(r => console.log(r)).catch(e => console.log(e));
+    
+    </script>
+</body>
+</html>

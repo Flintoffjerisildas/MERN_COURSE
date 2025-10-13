@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = [1,2,3,4];
+        console.log("Array Destructuring");
+        
+        console.log("Original Array: ", x);
+        const [one, two, three] = x;
+
+        console.log("Third Element: ", three);
+        const [a,...rest] = x;
+        console.log("Rest of the Array except First element: ", rest);
+
+        const nums = [ ...x, 5, 6, 7];
+        console.log("New Array after adding elements at the end: ", nums);
+
+        const obj1 = { x: 1, y: 2};
+        const obj2 = { ...obj1, z: 3};
+
+        const spread = {...obj1, ...obj2};
+
+
+        console.log("Spread Operator: ", spread);
+    </script>
+</body>
+</html>
